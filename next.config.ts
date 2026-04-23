@@ -6,6 +6,11 @@ const withMDX = createMDX({
 });
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  basePath: '/ai-learning-portal',
+  images: {
+    unoptimized: true,
+  },
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
   eslint: {
     ignoreDuringBuilds: true,

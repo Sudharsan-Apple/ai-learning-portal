@@ -1,7 +1,14 @@
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
-import { getDocBySlug } from "@/lib/content";
+import { getDocBySlug, getDocs } from "@/lib/content";
+
+export async function generateStaticParams() {
+  const docs = getDocs("knowledge");
+  return docs.map((doc) => ({
+    slug: doc.slug,
+  }));
+}
 
 export default async function KnowledgeDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
