@@ -1,31 +1,39 @@
 ---
-title: "Azure AI Foundry"
-summary: "High-confidence notes for Azure AI Foundry aligned to reliable learning objectives."
-category: "Azure Foundry"
+title: "Azure AI Foundry & SDK"
+summary: "Deep dive into Azure AI Foundry architecture, Agent SDK, and Prompt Flow (AI-102 & AB-900)."
+category: "Azure AI"
 tags:
-  - "AB-900"
-  - "AI Agents"
+  - "Foundry"
+  - "SDK"
+  - "Agents"
 ---
 
-## Why this matters
+# Azure AI Foundry & SDK
 
-This section is curated for **reliability over hype**. Focus on concepts that repeatedly appear in architecture discussions and exam scenarios.
+Azure AI Foundry is the **Unified Platform** for building custom agents.
 
-## Core Concepts
+## 1. Why Foundry?
+Foundry consolidates **AI Studio** and **Azure Machine Learning**.
 
-- Define the service boundary clearly.
-- Understand capability vs limitation before implementation.
-- Apply security, compliance, and observability from day 1.
+*   **Unified Model Catalog:** ACCESS TO GPT-4o, Claude 3.5, and Llama 4 in one place.
+*   **Prompt Flow:** A visual/code-based tool to build agentic logic.
+*   **Evaluation:** Tools to measure "Faithfulness," "Relevance," and "Coherence."
 
-## Practical Checklist
+## 2. The Agent SDK
+This is the core for professional developers building custom agents.
 
-1. Map business requirement → AI capability.
-2. Select managed services before custom ML where possible.
-3. Design fallback and human escalation paths.
-4. Add logging, cost controls, and quality evaluation.
+*   **Logic:** Think → Plan → Act.
+*   **Tools:** Bind custom Python/JS functions to the agent.
+*   **Context:** The SDK handles "Conversation History" and "State Management."
 
-## Common Mistakes
+## 3. RAG (Retrieval-Augmented Generation)
+Foundry makes RAG easy.
+*   **Index Builder:** Automatically chunk and embed your SharePoint or PDF data.
+*   **Vector Search:** Ground the AI in your private business data.
 
-- Treating copilots as fully autonomous systems.
-- Ignoring grounding data quality and permissions.
-- Skipping responsible AI controls.
+---
+
+## ✅ Exam Readiness Checklist
+- [ ] What is "Grounding," and why is it needed?
+- [ ] What is the role of Prompt Flow in an agent's lifecycle?
+- [ ] Can you define "Model-as-a-Service" (MaaS)?

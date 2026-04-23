@@ -1,31 +1,39 @@
 ---
-title: "Microsoft Copilot Studio"
-summary: "High-confidence notes for Microsoft Copilot Studio aligned to reliable learning objectives."
+title: "Copilot Studio: Generative Actions"
+summary: "Deep dive into Autonomous Agents, Generative Actions, and Orchestration (AB-900 Domain 3)."
 category: "Copilot Studio"
 tags:
   - "AB-900"
-  - "AI Agents"
+  - "Agents"
+  - "Orchestration"
 ---
 
-## Why this matters
+# Copilot Studio: Generative Actions
 
-This section is curated for **reliability over hype**. Focus on concepts that repeatedly appear in architecture discussions and exam scenarios.
+This is where the most aggressive AI updates are happening in 2026.
 
-## Core Concepts
+## 1. Generative Actions (GA)
+Microsoft has moved beyond "Topics." Now, you can build **"Autonomous Agents."**
 
-- Define the service boundary clearly.
-- Understand capability vs limitation before implementation.
-- Apply security, compliance, and observability from day 1.
+*   **Logic:** The agent uses LLM reasoning to decide which API or tool to call based on the user's intent.
+*   **Benefits:** Reduces the need for building manual "Decision Trees" (topics).
 
-## Practical Checklist
+## 2. Agent Orchestration
+Build "Agent Teams" where a "Lead Agent" delegates tasks to "Specialists."
 
-1. Map business requirement → AI capability.
-2. Select managed services before custom ML where possible.
-3. Design fallback and human escalation paths.
-4. Add logging, cost controls, and quality evaluation.
+*   **SAP Agent:** Handles finance and invoicing.
+*   **SharePoint Agent:** Handles document retrieval.
+*   **HR Agent:** Handles employee leave and policy.
 
-## Common Mistakes
+## 3. Dynamic Chaining
+The ability for an agent to perform multi-step workflows autonomously.
 
-- Treating copilots as fully autonomous systems.
-- Ignoring grounding data quality and permissions.
-- Skipping responsible AI controls.
+*   **Example:** "Find the latest invoice, summarize the delta, and email the manager."
+*   **The Power:** This happens without the human user prompting each step.
+
+---
+
+## ✅ Exam Readiness Checklist
+- [ ] What is "Generative Action" in Copilot Studio?
+- [ ] Can an agent in Copilot Studio call a Power Automate flow?
+- [ ] What is "Agent Orchestration"?

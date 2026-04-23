@@ -1,31 +1,39 @@
 ---
 title: "AI Agents Fundamentals"
-summary: "High-confidence notes for AI Agents Fundamentals aligned to reliable learning objectives."
-category: "Ai Agents"
+summary: "Introduction to ReAct, Tool Use, and Memory Patterns for AI Agents (AB-900)."
+category: "AI Fundamentals"
 tags:
-  - "AB-900"
-  - "AI Agents"
+  - "Agents"
+  - "ReAct"
+  - "Memory"
 ---
 
-## Why this matters
+# AI Agents Fundamentals
 
-This section is curated for **reliability over hype**. Focus on concepts that repeatedly appear in architecture discussions and exam scenarios.
+This is the "Brain" of your portal.
 
-## Core Concepts
+## 1. ReAct (Reasoning + Acting)
+The ReAct pattern is the "gold standard" for agent architecture.
 
-- Define the service boundary clearly.
-- Understand capability vs limitation before implementation.
-- Apply security, compliance, and observability from day 1.
+*   **Logic:** Think → Plan → Act → Observe → Repeat.
+*   **The Power:** It allows an agent to solve multi-step problems by reasoning and then using a tool (e.g., search, SQL).
 
-## Practical Checklist
+## 2. Tool Use (Function Calling)
+Standardized way for agents to "click buttons" or "search data."
 
-1. Map business requirement → AI capability.
-2. Select managed services before custom ML where possible.
-3. Design fallback and human escalation paths.
-4. Add logging, cost controls, and quality evaluation.
+*   **Logic:** The LLM generates the arguments for a function, but the *code* executes it.
+*   **The Goal:** Connect the LLM to real-world actions.
 
-## Common Mistakes
+## 3. Memory Architectures
+Agents need a way to remember user preferences across sessions.
 
-- Treating copilots as fully autonomous systems.
-- Ignoring grounding data quality and permissions.
-- Skipping responsible AI controls.
+*   **Short-term:** Buffer memory (recent chat).
+*   **Long-term:** Semantic memory (stored in a Vector DB like Qdrant or Pinecone).
+*   **Episodic:** Remembering specific past events.
+
+---
+
+## ✅ Exam Readiness Checklist
+- [ ] What is the "ReAct" pattern?
+- [ ] How does an agent handle "Function Calling"?
+- [ ] What is the difference between Short-term and Long-term memory?

@@ -1,31 +1,38 @@
 ---
-title: "SPFx + AI Integration"
-summary: "High-confidence notes for SPFx + AI Integration aligned to reliable learning objectives."
-category: "Spfx"
+title: "SPFx & SharePoint AI Integration"
+summary: "Deep dive into SPFx 1.21+ Agentic Web Parts, Copilot plugins, and SharePoint Agentic search (AB-900)."
+category: "SPFx & SharePoint"
 tags:
-  - "AB-900"
-  - "AI Agents"
+  - "SPFx"
+  - "SharePoint"
+  - "Plugins"
 ---
 
-## Why this matters
+# SPFx & SharePoint AI Integration
 
-This section is curated for **reliability over hype**. Focus on concepts that repeatedly appear in architecture discussions and exam scenarios.
+As an SPFx expert, this is your most important section.
 
-## Core Concepts
+## 1. SPFx 1.21+ (The Agent Era)
+The latest version of SPFx introduces **"Agentic Web Parts."**
 
-- Define the service boundary clearly.
-- Understand capability vs limitation before implementation.
-- Apply security, compliance, and observability from day 1.
+*   **`BaseAgentWebPart`**: A specialized base class for building AI-aware UI components.
+*   **Copilot UI Integration:** SPFx web parts can now surface in Copilot's response area.
 
-## Practical Checklist
+## 2. Declarative Agents (No-Code)
+You can build agents directly inside SharePoint lists and libraries.
 
-1. Map business requirement → AI capability.
-2. Select managed services before custom ML where possible.
-3. Design fallback and human escalation paths.
-4. Add logging, cost controls, and quality evaluation.
+*   **Customization:** Define the instructions, grounding data, and triggers.
+*   **Publishing:** Agents can be shared with specific users or the whole organization.
 
-## Common Mistakes
+## 3. Copilot Plugins (Pro-Code)
+Extend M365 Copilot with your custom SPFx code.
 
-- Treating copilots as fully autonomous systems.
-- Ignoring grounding data quality and permissions.
-- Skipping responsible AI controls.
+*   **Message Extensions:** Allow Copilot to "search" and "act" on your custom data.
+*   **Graph Connectors:** Bring your external data (SQL, CRM, etc.) into the M365 Semantic Index.
+
+---
+
+## ✅ Exam Readiness Checklist
+- [ ] What is a "Declarative Agent" in SharePoint?
+- [ ] How does a "Graph Connector" different from a "Plugin"?
+- [ ] Can an SPFx web part trigger an AI agentic action?

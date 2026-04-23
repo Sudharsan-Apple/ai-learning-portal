@@ -1,31 +1,42 @@
 ---
-title: "Microsoft Purview & Responsible AI Governance"
-summary: "High-confidence notes for Microsoft Purview & Responsible AI Governance aligned to reliable learning objectives."
-category: "Purview"
+title: "Microsoft Purview & AI Governance"
+summary: "Deep dive into DLP, Sensitivity Labels, and Audit Logs for AI Agents (AB-900 Domain 2)."
+category: "Governance"
 tags:
   - "AB-900"
-  - "AI Agents"
+  - "Security"
+  - "Compliance"
 ---
 
-## Why this matters
+# Microsoft Purview & AI Governance
 
-This section is curated for **reliability over hype**. Focus on concepts that repeatedly appear in architecture discussions and exam scenarios.
+In the AB-900 exam, Governance accounts for **35-40%** of the score. This is the most critical section for production readiness.
 
-## Core Concepts
+## 1. Sensitivity Labels (The "Eyes" of the Agent)
+Sensitivity labels define what data an AI Agent or Copilot can "see" and "cite."
 
-- Define the service boundary clearly.
-- Understand capability vs limitation before implementation.
-- Apply security, compliance, and observability from day 1.
+*   **How it works:** If a document is labeled "Confidential," the AI agent will only process it if the user asking the question has the appropriate permissions.
+*   **Exam Tip:** Sensitivity labels do **not** override existing SharePoint permissions; they add an extra layer of protection.
 
-## Practical Checklist
+## 2. Data Loss Prevention (DLP) for Copilot
+DLP policies prevent sensitive information (like credit card numbers or NRICs) from being shared in AI conversations.
 
-1. Map business requirement → AI capability.
-2. Select managed services before custom ML where possible.
-3. Design fallback and human escalation paths.
-4. Add logging, cost controls, and quality evaluation.
+*   **Blocking:** You can set a policy that blocks Copilot from responding if the source document contains sensitive info types (SITs).
+*   **Auditing:** Even if not blocked, every interaction is logged for compliance review.
 
-## Common Mistakes
+## 3. Retention vs. Protection
+*   **Retention:** Defines how long AI conversation history is *kept* (for legal discovery).
+*   **Sensitivity:** Defines who can *access* the data.
+*   **The Trap:** AB-900 often asks which one to use for "data leakage" (Sensitivity/DLP) vs "legal compliance" (Retention).
 
-- Treating copilots as fully autonomous systems.
-- Ignoring grounding data quality and permissions.
-- Skipping responsible AI controls.
+## 4. Audit Logs
+Every prompt and every AI response is stored in the **Unified Audit Log**.
+*   **Admin Center:** Access this via the Microsoft Purview compliance portal.
+*   **Use Case:** Investigating "Hallucinations" or "Inappropriate content" reported by users.
+
+---
+
+## ✅ Exam Readiness Checklist
+- [ ] Do you know the difference between a Sensitivity Label and a Retention Policy?
+- [ ] Can you identify where to find the Copilot interaction logs?
+- [ ] Do you understand how SITs (Sensitive Information Types) work with AI?
